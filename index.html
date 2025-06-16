@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Young Architects Foundation</title>
+    <link rel="stylesheet" href="index.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  
+
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">
+    SHAPING THE FUTURE OF IRAQI CITIES
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="image/logoeng.png" alt="YAF Logo">
+    </div>
+
+    <div class="header-right">
+      <div class="top-social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="buttons">
+        <a class="merch" href="#">MERCH</a>
+        <a class="account" href="#">MY ACCOUNT</a>
+        <a class="join" href="#">JOIN</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+  <ul>
+  <li><a href="index.html">ABOUT</a></li>
+  <li><a href="team.html">MEMBERSHIP</a></li>
+    <li><a href="art.html">ARTICLE & NEWS</a></li>
+  <li><a href="event.html" >EVENTS</a></li>
+
+  <li><a href="activat.html">ACTIVITIES</a></li>
+    <li><a href="comp.html">COMPETITIONS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+  <li><a href="part.html">PARTNERS</a></li>
+
+ 
+</ul>
+
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search Arch2O...">
+    <button>🔍</button>
+  </div>
+
+  <!-- قسم الصور الجديد -->
+ <div class="grid-container">
+  <div class="grid-item item-1" style="background-image: url('image/a1.png');" data-link="page1.html">
+    <h3>Villa La Moraleja | Vasco Vieira Arquitectos</h3>
+  </div>
+  <div class="grid-item" style="background-image: url('image/a1.png');" data-link="art.html">
+    <h3>The Yellow Box | Aslam Sham Architects</h3>
+  </div>
+  <div class="grid-item" style="background-image: url('image/a1.png');" data-link="">
+    <h3>House for Lisa and Bert | Alpina Architects</h3>
+  </div>
+  <div class="grid-item" style="background-image: url('image/a1.png');" data-link="page4.html">
+    <h3>Aga Khan Academy | Feilden Clegg Bradley Studios + Shatotto</h3>
+  </div>
+  <div class="grid-item" style="background-image: url('image/a5.png');" data-link="page5.html">
+    <h3>El Campestre Park | CCA + Bernardo Quinzaños</h3>
+  </div>
+</div>
+
+
+  <br>
+<div class="container">
+  <div class="main-grid">
+    <!-- Post 1 -->
+    <div class="post" data-link="post1.html">
+      <img src="image/a1.png" alt="Project Image">
+      <div class="post-info">
+        <a href="activat.html">
+        <h3>Hai Au Restaurant | TAHA STUDIO</h3>
+       </a>
+        <p class="date">📅 June 7, 2025</p>
+        <p>Hai Au Restaurant is located on the land of the old restaurant, ...</p>
+      </div>
+    </div>
+
+    <!-- Post 2 -->
+    <div class="post" data-link="post2.html">
+      <img src="image/al2o.png" alt="Project Image">
+      <div class="post-info">
+        <h3>Villa La Moraleja | Vasco Vieira Arquitectos</h3>
+        <p class="date">📅 June 6, 2025</p>
+        <p>From the beginning, the vision for Villa La Moraleja was clear — ...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <img src="image/al2o.png" alt="Magazine Cover">
+    <img src="image/al2o.png" alt="Magazine Set">
+    <div class="divider"></div>
+    <h4>Our Social Media</h4>
+    <div class="social-icons">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin-in"></i>
+      <i class="fab fa-tumblr"></i>
+      <i class="fab fa-pinterest-p"></i>
+    </div>
+  </div>
+</div>
+
+  </div>
+<br><br>  <footer>
+    <!-- القسم الأيمن: اللوغو والنص -->
+    <div class="right-section">
+      <img src="image/LOGARB.png" alt="Logo">
+      <div class="text-content">
+    
+      </div>
+    </div>
+
+    <!-- القسم الأيسر: العنوان والاتصال -->
+    <div class="left-section">
+      <p>IRAQ – BAGHDAD</p>
+      <p>P.O.BOX: 18310 ALSINA ST, ALKARADDA</p>
+      <p>E: ARCHIYCLUB@GMAIL.COM | T: +9647718625239</p>
+    </div>
+  </footer>
+<script>
+  document.querySelectorAll('.grid-item').forEach(item => {
+    item.style.cursor = 'pointer';
+    item.addEventListener('click', () => {
+      const link = item.getAttribute('data-link');
+      if (link) {
+        window.open(link, '_blank');
+      }
+    });
+  });
+</script>
+>
+
+
+</body>
+</html>

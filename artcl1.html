@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  
+      <link rel="stylesheet" href="index.css">
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقالة بصور ثابتة</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+    
+    .pagination {
+  display: flex;
+  justify-content: center;
+  direction: rtl;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.section.reverse .text {
+  text-align: left;
+}
+
+.section:not(.reverse) .text {
+  text-align: right;
+}
+
+
+.pagination a {
+  color: #333;
+  padding: 10px 18px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: background 0.3s, color 0.3s;
+  font-weight: bold;
+}
+
+.pagination a:hover {
+  background: #222;
+  color: #fff;
+}
+
+.pagination a.active {
+  background: #444;
+  color: #fff;
+  border-color: #444;
+}
+
+
+    .related-articles {
+  margin: 60px auto;
+}
+
+.articles-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.copy-link-wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.copy-btn {
+  background: linear-gradient(90deg, #444, #222);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.copy-btn:hover {
+  background: linear-gradient(90deg, #555, #333);
+  transform: scale(1.05);
+}
+
+
+.article-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.copy-btn {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.copy-btn:hover {
+  background-color: #444;
+}
+
+.article-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+  color: #333;
+}
+
+.article-card a {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+}
+
+    .container1{
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .section {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-box {
+  width: 300px;
+  height: 375px; /* height = width * 5/4 */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .text h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .text p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    .reverse {
+      flex-direction: row-reverse;
+    }
+
+    .banner {
+      margin: 40px 0;
+    }
+
+    .banner img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+
+      .reverse {
+        flex-direction: column;
+      }
+      .section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  position: relative;
+}
+
+
+      .image-box {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+        margin: 0 auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  
+    <div class="top-banner">
+    SHAPING THE FUTURE OF IRAQI CITIES
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="image/a1.png" alt="YAF Logo">
+    </div>
+
+    <div class="header-right">
+      <div class="top-social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+
+      <div class="buttons">
+        <a class="merch" href="#">MERCH</a>
+        <a class="account" href="#">MY ACCOUNT</a>
+        <a class="join" href="#">JOIN</a>
+      </div>
+    </div>
+  </header>
+
+<nav style="background-color:#222; padding:10px 0;">
+  <ul style="
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+  ">
+    <li><a href="index.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;" 
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">ABOUT</a></li>
+    <li><a href="team.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">MEMBERSHIP</a></li>
+    <li><a href="art.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">ARTICLE & NEWS</a></li>
+    <li><a href="event.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">EVENTS</a></li>
+    <li><a href="activat.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">ACTIVITIES</a></li>
+    <li><a href="comp.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">COMPETITIONS</a></li>
+    <li><a href="contact.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">CONTACT</a></li>
+    <li><a href="part.html" style="color:#fff; text-decoration:none; font-weight: bold; padding: 8px 15px; border-radius: 6px; transition: background-color 0.3s;"
+      onmouseover="this.style.backgroundColor='#444'" onmouseout="this.style.backgroundColor='transparent'">PARTNERS</a></li>
+  </ul>
+</nav>
+
+
+  <div class="container1">
+    
+<div style="text-align: left;">
+  <a href="art.html" style="
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #eee;
+      color: #5e5353;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    " 
+    onmouseover="this.style.backgroundColor='#444'; this.style.color='#fff';" 
+    onmouseout="this.style.backgroundColor='#eee'; this.style.color='#5e5353';">
+رجوع >>>>  </a> 
+</div>
+
+
+
+  <a href="artcl1.html" class="section" style="text-decoration:none; color: inherit;">
+    <div class="image-box">
+      <img src="image/4.5.png" alt="صورة المقال 1" />
+    </div>
+    <div class="text">
+      <h2>عنوان المقال 1</h2>
+      <p>اسم الكاتب</p>
+      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
+    </div>
+  </a>
+
+  <a href="artcl2.html" class="section reverse" style="text-decoration:none; color: inherit;">
+    <div class="image-box">
+      <img src="image/4.5.png" alt="صورة المقال 1" />
+    </div>
+    <div class="text">
+      <h2>عنوان المقال 2</h2>
+      <p>اسم الكاتب</p>
+      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
+    </div>
+  </a>
+
+  <a href="artcl3.html" class="section" style="text-decoration:none; color: inherit;">
+    <div class="image-box">
+      <img src="image/4.5.png" alt="صورة المقال 1" />
+    </div>
+    <div class="text">
+      <h2>عنوان المقال 3</h2>
+      <p>اسم الكاتب</p>
+      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
+    </div>
+  </a>
+
+  <a href="artcl4.html" class="section reverse" style="text-decoration:none; color: inherit;">
+    <div class="image-box">
+      <img src="image/4.5.png" alt="صورة المقال 1" />
+    </div>
+    <div class="text">
+      <h2>عنوان المقال 4</h2>
+      <p>اسم الكاتب</p>
+      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
+    </div>
+  </a>
+</div>
+
+    
+
+  </div>
+  <div class="pagination">
+  <a href="artcl1.html" class="active">1</a>
+  <a href="artcl2.html">2</a>
+  <a href="a">3</a>
+  <a href="#">4</a>
+  <a href="#">التالي</a>
+</div>
+
+<br><br>  <footer>
+    <!-- القسم الأيمن: اللوغو والنص -->
+    <div class="right-section">
+      <img src="image/LOGARB.png" alt="Logo">
+      <div class="text-content">
+    
+      </div>
+    </div>
+
+    <!-- القسم الأيسر: العنوان والاتصال -->
+    <div class="left-section">
+      <p>IRAQ – BAGHDAD</p>
+      <p>P.O.BOX: 18310 ALSINA ST, ALKARADDA</p>
+      <p>E: ARCHIYCLUB@GMAIL.COM | T: +9647718625239</p>
+    </div>
+
+<script>
+  function copyArticleLink() {
+    // تعديل هذا الرابط للرابط الفعلي للصفحة إذا كانت ثابتة
+    const link = window.location.href;
+
+    navigator.clipboard.writeText(link).then(function () {
+      alert("تم نسخ رابط المقال إلى الحافظة!");
+    }, function (err) {
+      alert("حدث خطأ أثناء نسخ الرابط.");
+    });
+  }
+</script>
+
+
+
+<script>
+  const articlesPerPage = 4;
+  const articlesContainer = document.getElementById('articles-container');
+  const allArticles = Array.from(document.querySelectorAll('.article-card')); // تأكد أن كل مقالة تحتوي على هذا الكلاس
+  const pagination = document.getElementById('pagination');
+
+  let currentPage = 1;
+  const totalPages = Math.ceil(allArticles.length / articlesPerPage);
+
+  function displayArticles(page) {
+    articlesContainer.innerHTML = '';
+    const start = (page - 1) * articlesPerPage;
+    const end = start + articlesPerPage;
+    const articlesToShow = allArticles.slice(start, end);
+
+    articlesToShow.forEach(article => {
+      articlesContainer.appendChild(article);
+    });
+
+    updatePagination();
+  }
+
+  function updatePagination() {
+    pagination.innerHTML = '';
+
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === currentPage) btn.classList.add('active');
+      btn.addEventListener('click', () => {
+        currentPage = i;
+        displayArticles(currentPage);
+      });
+      pagination.appendChild(btn);
+    }
+  }
+
+  // أول تحميل
+  displayArticles(currentPage);
+</script>
+
+
+
+</body>
+</html>

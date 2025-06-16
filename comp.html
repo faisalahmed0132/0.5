@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+      <link rel="stylesheet" href="index.css">
+
+  <title>Competitions - Young Architects Foundation</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f0f2f5;
+      color: #333;
+    }
+
+    .top-banner {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 30px;
+      background: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo img {
+      height: 100px;
+      margin-left: 200px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-right: 200px;
+    }
+
+    .top-social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      background: #fff;
+    }
+
+    .top-social-icons a {
+      color: #333;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    .buttons a {
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    .buttons .merch {
+      background: yellow;
+      color: #000;
+    }
+
+    .buttons .account {
+      background: #dbe4ff;
+      color: #003366;
+    }
+
+    .buttons .join {
+      background: #003366;
+      color: white;
+    }
+
+    nav {
+      background: #f3f3f3;
+      padding: 10px 100px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .search-bar {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .search-bar input {
+      width: 400px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px 0 0 4px;
+    }
+
+    .search-bar button {
+      padding: 10px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* ------ قسم المسابقات ------ */
+    .competitions-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    .competitions-section h2 {
+      text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #003366;
+    }
+
+    .competitions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .competition-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .competition-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .competition-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .competition-content {
+      padding: 15px 20px;
+    }
+
+    .competition-content h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .competition-content p {
+      font-size: 15px;
+      color: #666;
+    }
+
+    /* ------ Footer ثابت ------ */
+    footer {
+      background-color: #6f0d27;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 60px;
+      direction: rtl;
+      flex-wrap: wrap;
+    }
+
+    .right-section {
+      display: flex;
+      align-items: center;
+      text-align: right;
+      gap: 20px;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .right-section img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+    }
+
+    .text-content {
+      max-width: 400px;
+    }
+
+    .text-content h2 {
+      margin: 0;
+      font-size: 26px;
+    }
+
+    .text-content p {
+      margin-top: 8px;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .left-section {
+      text-align: left;
+      font-size: 16px;
+      line-height: 1.8;
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .left-section p {
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+      }
+
+      .search-bar input {
+        width: 90vw;
+      }
+
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .right-section, .left-section {
+        flex: unset;
+        text-align: center;
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-banner">SHAPING THE FUTURE OF IRAQI CITIES</div>
+
+  <header>
+    <div class="logo">
+      <img src="a5.png" alt="YAF Logo">
+    </div>
+    <div class="header-right">
+      <div class="top-social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-tiktok"></i></a>
+      </div>
+      <div class="buttons">
+        <a class="merch" href="#">MERCH</a>
+        <a class="account" href="#">MY ACCOUNT</a>
+        <a class="join" href="#">JOIN</a>
+      </div>
+    </div>
+  </header>
+
+  <nav>
+     <ul>
+<li><a href="index.html">ABOUT</a></li>
+  <li><a href="team.html">MEMBERSHIP</a></li>
+    <li><a href="art.html">ARTICLE & NEWS</a></li>
+  <li><a href="event.html" >EVENTS</a></li>
+
+  <li><a href="activat.html">ACTIVITIES</a></li>
+    <li><a href="comp.html">COMPETITIONS</a></li>
+  <li><a href="contact.html">CONTACT</a></li>
+  <li><a href="part.html">PARTNERS</a></li>
+
+    </ul>
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search Arch2O...">
+    <button>🔍</button>
+  </div>
+
+  <section class="competitions-section">
+    <h2>Latest Competitions</h2>
+    <div class="competitions-grid">
+      <div class="competition-card">
+        <img src="image/a1.png" alt="Competition 1">
+        <div class="competition-content">
+          <h3>Urban Future Design 2025</h3>
+          <p>Redesign public spaces in Baghdad to support youth and sustainability.</p>
+        </div>
+      </div>
+      <div class="competition-card">
+        <img src="image/a5.png" alt="Competition 2">
+        <div class="competition-content">
+          <h3>Reviving Heritage Sites</h3>
+          <p>Architectural proposals for preserving and repurposing historic landmarks.</p>
+        </div>
+      </div>
+      <div class="competition-card">
+        <img src="image/a5.png" alt="Competition 3">
+        <div class="competition-content">
+          <h3>Sustainable Housing Challenge</h3>
+          <p>Design affordable and eco-friendly housing models for urban Iraq.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+ <br><br>  <footer>
+    <!-- القسم الأيمن: اللوغو والنص -->
+    <div class="right-section">
+      <img src="image/LOGARB.png" alt="Logo">
+      <div class="text-content">
+    
+      </div>
+    </div>
+
+    <!-- القسم الأيسر: العنوان والاتصال -->
+    <div class="left-section">
+      <p>IRAQ – BAGHDAD</p>
+      <p>P.O.BOX: 18310 ALSINA ST, ALKARADDA</p>
+      <p>E: ARCHIYCLUB@GMAIL.COM | T: +9647718625239</p>
+    </div>
+  </footer>
+</body>
+</html>

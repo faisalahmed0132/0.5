@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تفاصيل مقالات</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo&display=swap" rel="stylesheet">
+  <style>
+    /* أخفاء كل المقالات أولاً */
+    section.article {
+      display: none;
+    }
+
+    /* المقالة التي نريد عرضها */
+    section#article1:target,
+    section#article2:target {
+      display: block;
+    }
+
+    body {
+      font-family: 'Cairo', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .title {
+      font-size: 32px;
+      color: #750c1d;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .text {
+      flex: 1 1 55%;
+      font-size: 18px;
+    }
+
+    .image-box {
+      flex: 1 1 40%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .image-box img {
+      width: 100%;
+    }
+
+    .details {
+      background: #f0f0f0;
+      padding: 10px;
+      border-right: 4px solid #750c1d;
+      margin-top: 15px;
+    }
+
+    .links a {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 15px;
+      background: #750c1d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="links" style="text-align: center;">
+    <a href="#article1">مقالة 1</a>
+    <a href="#article2">مقالة 2</a>
+  </div>
+
+  <!-- مقالة 1 -->
+  <section id="article1" class="article">
+    <div class="container">
+      <div class="title">عنوان المقالة 1</div>
+      <div class="content">
+        <div class="text">
+          <p>هذا النص يخص المقالة الأولى...</p>
+          <div class="details">
+            <strong>التاريخ:</strong> 1 يناير 2025<br>
+            <strong>المكان:</strong> بغداد
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="image/a1.png" alt="مقالة 1">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- مقالة 2 -->
+  <section id="article2" class="article">
+    <div class="container">
+      <div class="title">عنوان المقالة 2</div>
+      <div class="content">
+        <div class="text">
+          <p>هذا النص يخص المقالة الثانية...</p>
+          <div class="details">
+            <strong>التاريخ:</strong> 2 فبراير 2025<br>
+            <strong>المكان:</strong> البصرة
+          </div>
+        </div>
+        <div class="image-box">
+          <img src="image/a2.png" alt="مقالة 2">
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
