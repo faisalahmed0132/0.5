@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+  
       <link rel="stylesheet" href="index.css">
 
   <meta charset="UTF-8" />
@@ -159,13 +160,14 @@
     }
 
     .image-box {
-      width: 300px;
-      height: 300px;
-      overflow: hidden;
-      border-radius: 8px;
-      background-color: #ddd;
-      flex-shrink: 0;
-    }
+  width: 300px;
+  height: 375px; /* height = width * 5/4 */
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #ddd;
+  flex-shrink: 0;
+}
+
 
     .image-box img {
       width: 100%;
@@ -234,7 +236,9 @@
     }
   </style>
 </head>
+
 <body>
+  
     <div class="top-banner">
     SHAPING THE FUTURE OF IRAQI CITIES
   </div>
@@ -293,57 +297,163 @@
 
 
   <div class="container1">
-  <a href="artcl1.html" class="section" style="text-decoration:none; color: inherit;">
-    <div class="image-box">
-      <img src="image/a1.png" alt="صورة المقال 1" />
-    </div>
-    <div class="text">
-      <h2>عنوان المقال 1</h2>
-      <p>اسم الكاتب</p>
-      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
-    </div>
-  </a>
-
-  <a href="artcl2.html" class="section reverse" style="text-decoration:none; color: inherit;">
-    <div class="image-box">
-      <img src="image/a1.png" alt="صورة المقال 2" />
-    </div>
-    <div class="text">
-      <h2>عنوان المقال 2</h2>
-      <p>اسم الكاتب</p>
-      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
-    </div>
-  </a>
-
-  <a href="artcl3.html" class="section" style="text-decoration:none; color: inherit;">
-    <div class="image-box">
-      <img src="image/a1.png" alt="صورة المقال 3" />
-    </div>
-    <div class="text">
-      <h2>عنوان المقال 3</h2>
-      <p>اسم الكاتب</p>
-      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
-    </div>
-  </a>
-
-  <a href="artcl4.html" class="section reverse" style="text-decoration:none; color: inherit;">
-    <div class="image-box">
-      <img src="image/a1.png" alt="صورة المقال 4" />
-    </div>
-    <div class="text">
-      <h2>عنوان المقال 4</h2>
-      <p>اسم الكاتب</p>
-      <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربي، حيث يمكنك أن تقع.</p>
-    </div>
-  </a>
+    
+<div style="text-align: left;">
+  <a href="art.html" style="
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #eee;
+      color: #5e5353;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s;
+    " 
+    onmouseover="this.style.backgroundColor='#444'; this.style.color='#fff';" 
+    onmouseout="this.style.backgroundColor='#eee'; this.style.color='#5e5353';">
+رجوع >>>>  </a> 
 </div>
+
+
+
+  <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقالة بصور ثابتة</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f8f8;
+      margin: 0;
+      padding: 0;
+      direction: rtl;
+    }
+
+    .container11 {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #fff;
+    }
+
+    .section1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      gap: 20px;
+      flex-wrap: nowrap; /* لا لف */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .section1:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+      position: relative;
+    }
+
+    .section1.reverse1 {
+      flex-direction: row-reverse;
+      gap: 0;
+    }
+
+    .section1.reverse1 .text1 {
+      text-align: left;
+      padding-left: 15px;
+      padding-right: 0;
+    }
+
+    .image-box1 {
+      width: 300px;
+      height: 375px;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #ddd;
+      flex-shrink: 0;
+      flex-grow: 0;
+    }
+
+    .image-box1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .text1 {
+      flex-grow: 1; /* النص ياخذ باقي المساحة */
+      min-width: 150px; /* أقل عرض للنص */
+      word-break: break-word; /* كسر الكلمات الطويلة */
+    }
+
+    .text1 h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .text1 p {
+      color: #555;
+      line-height: 1.8;
+    }
+
+    /* الموبايل */
+    @media (max-width: 768px) {
+      .section1 {
+        flex-wrap: nowrap; /* عدم التفاف */
+      }
+      .image-box1 {
+        width: 40%;
+        height: auto;
+      }
+      .text1 {
+        width: 55%;
+        min-width: unset; /* الغاء الحد الأدنى */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container11">
+
+    <a href="artcl3.html" class="section1">
+      <div class="image-box1">
+        <img src="image/4.5.png" alt="صورة المقال 1" />
+      </div>
+      <div class="text1">
+        <h2>عنوان المقال 1</h2>
+        <p>اسم الكاتب</p>
+        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+      </div>
+    </a>
+
+    <a href="artcl3.html" class="section1 reverse1">
+      <div class="image-box1">
+        <img src="image/4.5.png" alt="صورة المقال 2" />
+      </div>
+      <div class="text1">
+        <h2>عنوان المقال 2</h2>
+        <p>اسم الكاتب</p>
+        <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة.</p>
+      </div>
+    </a>
+
+  </div>
+</body>
+</html>
 
     
 
   </div>
   <div class="pagination">
-  <a href="artcl1.html" class="active">1</a>
-  <a href="artcl2.html">2</a>
+  <a href="artcl1.html">1</a>
+  <a href="artcl2.html" class="active">2</a>
   <a href="a">3</a>
   <a href="#">4</a>
   <a href="#">التالي</a>
